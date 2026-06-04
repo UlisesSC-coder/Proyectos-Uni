@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Directo - Toldos Torres</title>
+
+    <link rel="stylesheet" href="../css/estilos_proyecto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+ 
+    <script src="../javascript/valida_contacto_directo.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../imagenes/logo_toldos_torres.jpg" alt="Logo Toldos Torres">
+    </div>
+
+    <nav class="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="quienes_somos.html">Quiénes Somos</a>
+        <a href="mision_vision.html">Misión y Visión</a>
+        <a href="nuestros_servicios.html">Servicios</a>
+        <a href="nuestros_productos.html">Productos</a>
+        <a href="ubicacion.html">Ubicación</a>
+        <a href="contacto_directo.html">Contacto Directo</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Formularios</button>
+            <div class="dropdown-content">
+                <a href="vendedores.html">Vendedores</a>
+                <a href="clientes.html">Clientes</a>
+                <a href="articulos.html">Artículos</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="banner">
+    <h2>Contacto Directo</h2>
+    <p>Envíanos tu información y nos pondremos en contacto contigo.</p>
+</section>
+
+<main style="padding: 40px; max-width: 900px; margin: auto;">
+
+    <div class="tarjeta faq-card" style="padding: 35px;">
+        <h3 style="color:#D32F2F; margin-bottom:20px;">Formulario de Contacto</h3>
+
+        <form id="formContacto" action="prueba_formulario.html" method="GET">
+
+         
+            <label>Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px;">
+
+          
+            <label>Sexo:</label><br><br>
+            <input type="radio" name="sexo" value="Hombre"> Hombre &nbsp;&nbsp;
+            <input type="radio" name="sexo" value="Mujer"> Mujer
+            <br><br>
+
+          
+            <label>Edad:</label>
+            <select id="edad" name="edad" style="width:100%; padding:10px; margin:15px 0; border-radius:8px;">
+                <option value="">Selecciona tu edad</option>
+               
+                <script>
+                for(let i=10; i<=30; i++){
+                    document.write(`<option value="${i}">${i}</option>`);
+                }
+                </script>
+            </select>
+
+            
+            <label>Prefiero recibir noticias sobre:</label><br><br>
+
+<input type="checkbox" name="preferencias" value="Toldos Industriales"> Toldos industriales <br>
+<input type="checkbox" name="preferencias" value="Estructuras Metálicas"> Estructuras metálicas <br>
+<input type="checkbox" name="preferencias" value="Lonas y Materiales"> Lonas y nuevos materiales <br>
+<input type="checkbox" name="preferencias" value="Proyectos Comerciales"> Proyectos comerciales <br>
+<input type="checkbox" name="preferencias" value="Diseños Personalizados"> Diseños personalizados <br>
+<input type="checkbox" name="preferencias" value="Ofertas y Promociones"> Ofertas y promociones <br>
+
+
+            
+            <button type="submit" style="
+                background:#D32F2F; 
+                border:none; 
+                padding:12px 20px; 
+                color:white; 
+                border-radius:10px; 
+                font-size:18px;
+                cursor:pointer;
+                margin-top:10px;">
+                Grabar estos datos
+            </button>
+
+        </form>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2025 Toldos Torres | Todos los derechos reservados</p>
+
+    <div class="redes-sociales">
+        <a href="https://wa.me/message/OTSPTEDUYEG2F1" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/ToldosTorresZapotlanejo" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/toldos_torre/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@toldostorres" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+</footer>
+
+</body>
+</html>

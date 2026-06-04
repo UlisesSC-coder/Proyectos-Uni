@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículos - Toldos Torres</title>
+
+    <link rel="stylesheet" href="../css/estilos_proyecto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+   
+    <script src="../javascript/valida_articulos.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../imagenes/logo_toldos_torres.jpg" alt="Logo Toldos Torres">
+    </div>
+
+    <nav class="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="quienes_somos.html">Quiénes Somos</a>
+        <a href="mision_vision.html">Misión y Visión</a>
+        <a href="nuestros_servicios.html">Servicios</a>
+        <a href="nuestros_productos.html">Productos</a>
+        <a href="ubicacion.html">Ubicación</a>
+        <a href="contacto_directo.html">Contacto Directo</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Formularios</button>
+            <div class="dropdown-content">
+                <a href="vendedores.html">Vendedores</a>
+                <a href="clientes.html">Clientes</a>
+                <a href="articulos.html">Artículos</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="banner">
+    <h2>Registro de Artículos</h2>
+    <p>Agrega un nuevo artículo al inventario.</p>
+</section>
+
+<main style="padding: 40px; max-width: 900px; margin: auto;">
+
+    <div class="tarjeta faq-card" style="padding: 35px;">
+        <h3 style="color:#D32F2F; margin-bottom:20px;">Formulario de Artículos</h3>
+
+        <form id="formArticulos" action="prueba_formulario.html" method="GET">
+
+            <label>Nombre del artículo:</label>
+            <input type="text" id="nombre" name="nombre" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px;">
+
+            <label>Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px;">
+
+            <label>Categoría:</label><br><br>
+            <select id="categoria" name="categoria" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px;">
+                <option value="">Selecciona...</option>
+                <option value="Toldo fijo">Toldo fijo</option>
+                <option value="Carpa">Carpa</option>
+                <option value="Estructura metálica">Estructura metálica</option>
+                <option value="Lona">Lona</option>
+                <option value="Accesorio">Accesorio</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <label>Precio:</label>
+            <input type="number" id="precio" name="precio" min="0" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px;">
+
+            <label>Stock (existencia):</label>
+            <input type="number" id="stock" name="stock" min="0" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px;">
+
+            <label>Código del artículo:</label>
+            <input type="text" id="codigo" name="codigo" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px;">
+
+            <label>Proveedor:</label>
+            <input type="text" id="proveedor" name="proveedor" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px;">
+
+            <label>Fecha de ingreso:</label>
+            <input type="date" id="fecha" name="fecha" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px;">
+
+            <button type="submit" style="
+                background:#D32F2F; 
+                border:none; 
+                padding:12px 20px; 
+                color:white; 
+                border-radius:10px; 
+                font-size:18px;
+                cursor:pointer;
+                margin-top:10px;">
+                Grabar estos datos
+            </button>
+
+        </form>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2025 Toldos Torres | Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
