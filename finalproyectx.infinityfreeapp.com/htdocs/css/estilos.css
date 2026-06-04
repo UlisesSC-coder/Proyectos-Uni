@@ -1,0 +1,1461 @@
+:root {
+    --bg-main: #f8f9fa;
+    --bg-card: #ffffff;
+    --bg-input: #ffffff;
+    --text-color: #0e1118;
+    --text-muted: #6b7280;
+    --accent-color: #8b3dff;
+    --accent-hover: #732dd9;
+    --canva-gradient: linear-gradient(135deg, #00c4cc 0%, #7d2ae8 100%);
+    --danger-color: #f43f5e;
+    --success-color: #10b981;
+    --border-color: #e2e8f0;
+    --border-radius: 12px;
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-main);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-card {
+    background-color: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(139, 61, 255, 0.08);
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.login-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: var(--canva-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+/* --- ESTILOS AGREGADOS PARA FORMULARIOS (Alta Predio, etc.) --- */
+.form-row-canva {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row-canva .grupo-formulario-canva {
+    flex: 1; /* Hace que ambos inputs tomen el mismo espacio */
+}
+
+.ancho-completo {
+    width: 100%;
+}
+
+/* Para que en celulares los inputs se pongan uno debajo del otro */
+@media (max-width: 768px) {
+    .form-row-canva {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+/* --- ESTILOS AGREGADOS PARA TABLAS DE CONSULTA (Padrón, etc.) --- */
+.tabla-container-canva {
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.tabla-container-canva h2 {
+    color: #0e1217;
+    margin-bottom: 10px;
+}
+
+.tabla-container-canva p {
+    color: #4a5568;
+    margin-bottom: 25px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.tabla-padron {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabla-padron thead tr {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.tabla-padron th {
+    padding: 14px;
+    color: #4a5568;
+    font-weight: 600;
+}
+
+.tabla-padron tbody tr {
+    border-bottom: 1px solid #edf2f7;
+    transition: background 0.2s;
+}
+
+/* Reemplazo del onmouseover de JavaScript */
+.tabla-padron tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+.tabla-padron td {
+    padding: 14px;
+    color: #4a5568;
+}
+
+.tabla-padron td.td-id {
+    font-weight: bold;
+    color: #00c4cc; /* Color del gradiente canva */
+}
+
+.tabla-padron td.td-nombre {
+    color: #0e1217;
+}
+
+.tabla-padron td.td-mono {
+    font-family: monospace;
+}
+/* --- ESTILOS ESPECÍFICOS PARA CONSULTA DE PREDIOS --- */
+.tabla-padron td.td-id-prop {
+    font-weight: bold;
+    color: #4a5568;
+}
+
+.tabla-padron td.td-valor {
+    color: #0e1217;
+    font-weight: 600;
+}
+.encabezado-tabla {
+    margin-bottom: 25px;
+}
+
+.encabezado-tabla h2 {
+    margin: 0;
+}
+
+.encabezado-tabla p {
+    margin: 5px 0 0 0;
+}
+
+.badge-estatus-secundario {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 600;
+    background-color: #edf2f7;
+    color: #4a5568;
+    display: inline-block;
+}
+.buscador-container {
+    margin-bottom: 30px;
+}
+.container-bajas {
+    width: 98%;
+    max-width: 1600px;
+}
+
+.texto-advertencia {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+.tabla-bajas {
+    font-size: 14px;
+}
+
+.tabla-bajas thead tr {
+    background-color: #fdf2f2;
+    border-bottom: 2px solid #f5c6cb;
+}
+
+.tabla-bajas th {
+    padding: 12px;
+}
+
+.tabla-bajas th.th-accion {
+    text-align: center;
+}
+
+.tabla-bajas tbody tr {
+    border-bottom: 1px solid #edf2f7;
+}
+
+.tabla-bajas td {
+    padding: 12px;
+}
+
+.td-clave-baja {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.td-id-prop-baja {
+    font-weight: bold;
+}
+
+.td-valor-baja {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.td-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.colindancias-width {
+    max-width: 180px;
+}
+
+.ubicacion-width {
+    max-width: 200px;
+}
+
+.badge-estatus-baja {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.td-accion {
+    text-align: center;
+}
+/* Nuevas clases específicas para la tabla de Baja Propietarios */
+.td-id-baja {
+    font-weight: bold;
+    color: #e74c3c;
+    white-space: nowrap;
+}
+
+.td-nombre-baja {
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.badge-mono {
+    font-family: monospace;
+    background: #f1f3f5;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+/* --- Clases específicas para Baja de Usuarios --- */
+.container-bajas-usuario {
+    width: 95%;
+    max-width: 1100px;
+}
+
+.td-clave-usuario {
+    font-family: monospace;
+    color: #4a5568;
+}
+
+.badge-admin {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #ebf8ff;
+    color: #2b6cb0;
+}
+.form-exito-baja {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 5px solid #e74c3c;
+}
+
+.icono-exito-baja {
+    font-size: 50px;
+}
+
+.titulo-exito-baja {
+    color: #c0392b;
+}
+
+.recibo-baja {
+    text-align: left;
+    background: #fff5f5;
+    padding: 20px;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.id-baja-destacado {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.texto-mono {
+    font-family: monospace;
+}
+.container-modificar-predio {
+    width: 98%;
+    max-width: 1600px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos específicos de la tabla de edición */
+.tabla-edicion thead tr {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.tabla-edicion th, 
+.tabla-edicion td {
+    padding: 12px;
+}
+
+.tabla-edicion tbody tr {
+    border-bottom: 1px solid #edf2f7;
+}
+
+/* Identificadores destacados en la tabla */
+.td-clave-predio {
+    font-weight: bold;
+    color: #00c4cc;
+}
+
+.td-id-prop-predio {
+    font-weight: bold;
+}
+
+.td-valor-predio {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Prevención de saltos de línea en datos numéricos o cortos */
+.texto-no-wrap {
+    white-space: nowrap;
+}
+
+/* Control estricto de textos largos (Colindancias y Domicilios) */
+.celda-recortada {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.celda-recortada-ancha {
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Badge o etiqueta para el Estatus */
+.badge-estatus-predio {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+/* Alineación de la columna de acciones */
+.th-accion,
+.td-accion {
+    text-align: center;
+}
+
+/* Botón de edición */
+.btn-editar-predio {
+    background: #00c4cc;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.btn-editar-predio:hover {
+    background: #00a3a8;
+}
+.container-modificar-prop {
+    width: 98%;
+    max-width: 1600px;
+}
+
+.td-id-prop {
+    font-weight: bold;
+    color: #00c4cc;
+    white-space: nowrap;
+}
+
+.td-nombre-prop {
+    font-weight: 500;
+    color: #2d3748;
+    white-space: nowrap;
+}
+
+.td-codigo-prop {
+    font-family: monospace;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: #4a5568;
+}
+
+.badge-codigo-prop {
+    background: #f1f3f5;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+.celda-recortada-prop {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.celda-recortada-email {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #4a5568;
+}
+
+.btn-editar-prop {
+    background: #00c4cc;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.container-modificar-usuario {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.container-modificar-usuario h2 {
+    color: #0e1217;
+    margin-bottom: 5px;
+}
+
+.container-modificar-usuario p {
+    color: #4a5568;
+    margin-bottom: 25px;
+}
+
+.tabla-edicion-usuario thead tr {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.tabla-edicion-usuario th,
+.tabla-edicion-usuario td {
+    padding: 12px;
+}
+
+.tabla-edicion-usuario th {
+    color: #4a5568;
+    font-weight: 600;
+}
+
+.tabla-edicion-usuario tbody tr {
+    border-bottom: 1px solid #edf2f7;
+}
+
+.td-id-usuario {
+    font-weight: bold;
+    color: #00c4cc;
+}
+
+.td-nombre-usuario {
+    color: #0e1217;
+    font-weight: bold;
+}
+
+.td-clave-usuario {
+    color: #4a5568;
+    font-family: monospace;
+}
+
+.td-rol-usuario {
+    color: #4a5568;
+}
+
+.td-usuarios-vacio {
+    padding: 30px;
+    text-align: center;
+    color: #a0aec0;
+}
+
+.btn-editar-usuario {
+    background: #00c4cc;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-editar-usuario:hover {
+    background: #00a3a8;
+}
+.btn-editar-prop:hover {
+    background: #00a3a8;
+}
+.input-error-validar {
+    border-color: #e74c3c !important;
+    background-color: #fdf2f2 !important;
+    outline: none;
+}
+.btn-regresar-baja {
+    text-decoration: none;
+    display: inline-block;
+    background: #e74c3c;
+    width: auto;
+    padding: 12px 30px;
+}
+
+.btn-regresar-baja:hover {
+    background: #c0392b;
+}
+
+.badge-operador {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #e6fffa;
+    color: #234e52;
+}
+.domicilio-width {
+    max-width: 220px;
+}
+
+.correo-width {
+    max-width: 180px;
+}
+.btn-eliminar-baja {
+    background: #e74c3c;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-eliminar-baja:hover {
+    background: #c0392b;
+}
+
+.input-buscador {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    border: 1px solid #dcdfe4;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-buscador:focus {
+    border-color: #00c4cc;
+}
+.td-nombre-bold {
+    color: #0e1217;
+    font-weight: bold;
+}
+
+.td-mono-small {
+    font-family: monospace;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.badge-estatus {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 600;
+    background-color: #e6fffa;
+    color: #00a3a4;
+    display: inline-block;
+}
+
+.tabla-padron td.td-nowrap {
+    white-space: nowrap;
+}
+
+.tabla-padron td.td-empty {
+    padding: 30px;
+    text-align: center;
+    color: #a0aec0;
+}
+.cards-grid-canva {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    padding-bottom: 5px;
+}
+
+.card-modulo-canva {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-modulo-canva:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-modulo-canva h2 {
+    font-size: 22px;
+    color: #111111;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.mosaico-container-usuarios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.tarjeta-usuario-item {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    width: calc(33.333% - 17px); /* 3 Columnas arriba */
+    min-width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-usuario-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+.tarjeta-usuario-item h2 {
+    font-size: 24px;
+    color: #111111;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+}
+
+.tarjeta-usuario-item p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.btn-tarjeta-accion {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #f0f2f5;
+    color: #111111;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+}
+
+.btn-tarjeta-accion:hover {
+    background-color: #e4e6e9;
+}
+
+/* Rompe a 2 columnas abajo para las tarjetas 4 y 5 si es necesario, manteniendo simetría */
+@media (max-width: 1024px) {
+    .tarjeta-usuario-item {
+        width: calc(50% - 13px);
+    }
+}
+@media (max-width: 650px) {
+    .tarjeta-usuario-item {
+        width: 100%;
+    }
+}
+.card-modulo-canva p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* BOTONES INTEGRADOS DENTRO DE LAS TARJETAS */
+.btn-card-canva {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: #f0f2f5;
+    color: #111111;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+}
+
+.btn-card-canva:hover {
+    background-color: #e4e6e9;
+}
+.modulo-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+.header-acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.tabla-usuarios th {
+    background-color: #1b365d;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tabla-usuarios td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e4ee;
+    color: #333;
+    font-size: 14px;
+}
+
+.tabla-usuarios tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.tabla-usuarios tr:hover {
+    background-color: #f1f3f7;
+}
+
+.txt-clave-monospace {
+    font-family: monospace; 
+    color: #555;
+}
+
+.tabla-vacia {
+    text-align: center; 
+    color: #888; 
+    padding: 20px;
+}
+
+/* BOTONES DE ACCIÓN MÓDULO USUARIOS */
+.btn-nuevo-usuario {
+    background-color: #2e7557;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.btn-nuevo-usuario:hover {
+    background-color: #235a42;
+}
+
+.btn-accion-editar {
+    background-color: #0275d8;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.btn-accion-editar:hover {
+    background-color: #025aa5;
+}
+
+.btn-accion-eliminar {
+    background-color: #d9534f;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.btn-accion-eliminar:hover {
+    background-color: #c9302c;
+}
+
+.alerta-error {
+    background-color: #f2dede;
+    color: #a94442;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.login-img {
+    width: 100%;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+}
+select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #dcdfe4;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #0e1217;
+    background-color: #ffffff;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234a5568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #00c4cc;
+    box-shadow: 0 0 0 3px rgba(0, 196, 204, 0.15);
+}
+
+select:disabled {
+    background-color: #f8f9fa;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #dcdfe4;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #0e1217;
+    background-color: #ffffff;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #00c4cc;
+    box-shadow: 0 0 0 3px rgba(0, 196, 204, 0.15);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: var(--bg-input);
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-group input:focus, 
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 4px rgba(139, 61, 255, 0.15);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.alerta-error {
+    background-color: #fff5f5;
+    border: 1px solid #feb2b2;
+    color: #c53030;
+    padding: 0.85rem;
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.login-footer {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.dashboard-page {
+    background-color: var(--bg-main);
+}
+
+.navbar {
+    background-color: var(--bg-card);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.btn-logout {
+    color: var(--danger-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--danger-color);
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: var(--danger-color);
+    color: #ffffff;
+}
+
+.dashboard-container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.dashboard-header {
+    margin-bottom: 2.5rem;
+}
+
+.dashboard-header h1 {
+    font-size: 2.2rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+}
+
+.dashboard-header p {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.dashboard-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(139, 61, 255, 0.06);
+}
+
+.dashboard-card h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.4rem;
+}
+
+.dashboard-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    min-height: 45px;
+}
+
+.btn-card {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    background-color: #f1f3f9;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: all 0.2s;
+}
+
+.dashboard-card:hover .btn-card {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.nav-container-canva {
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(14, 18, 23, 0.08);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ebebeb;
+}
+
+/* Lista del menú principal (Centrado horizontal) */
+.main-menu-canva {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* Elementos individuales del menú */
+.menu-item-canva {
+    position: relative;
+}
+
+/* Enlaces principales de la barra */
+.menu-item-canva > a {
+    display: block;
+    padding: 18px 22px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.1px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover estilo Canva: El texto cambia al morado icónico y el fondo se aclara */
+.menu-item-canva > a:hover {
+    color: #7d2ae8;
+    background-color: #f3f4f6;
+}
+
+/* Menús Desplegables flotantes (Drop-downs) */
+.dropdown-menu-canva {
+    display: none;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    min-width: 230px;
+    list-style: none;
+    padding: 8px;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(14, 18, 23, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    z-index: 1000;
+}
+
+/* Enlaces dentro de cada opción desplegable */
+.dropdown-menu-canva li a {
+    display: block;
+    padding: 10px 16px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover interno del menú: Se rellena con el color morado de Canva */
+.dropdown-menu-canva li a:hover {
+    background-color: #7d2ae8;
+    color: #ffffff;
+}
+
+/* Mostrar el menú flotante al pasar el cursor */
+.menu-item-canva:hover .dropdown-menu-canva {
+    display: block;
+}
+
+/* Botón Salir integrado de forma limpia */
+.menu-item-canva > a.btn-salir-canva {
+    color: #e74c3c;
+}
+.menu-item-canva > a.btn-salir-canva:hover {
+    background-color: #fdf2f2;
+    color: #c0392b;
+}
+
+/* Badge (Etiqueta) de usuario activo adaptado a la marca Canva */
+.user-badge-canva {
+    display: inline-block;
+    background-color: #7d2ae8;
+    color: #ffffff;
+    padding: 8px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(125, 42, 232, 0.2);
+}
+.form-container-canva {
+    max-width: 600px;
+    background-color: #ffffff;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(14, 18, 23, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.form-container-canva h2 {
+    margin: 0 0 8px 0;
+    color: #0e1217;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.form-container-canva p {
+    margin: 0 0 30px 0;
+    color: #5e6b7c;
+    font-size: 0.95rem;
+}
+
+/* Grupos y etiquetas de inputs */
+.grupo-formulario-canva {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-formulario-canva label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+/* Entradas de texto y selects con focus morado Canva */
+.grupo-formulario-canva input,
+.select-canva {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    border: 1px solid #dcdfe4;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #0e1217;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+
+.grupo-formulario-canva input:focus,
+.select-canva:focus {
+    border-color: #7d2ae8;
+    box-shadow: 0 0 0 3px rgba(125, 42, 232, 0.15);
+}
+
+/* Botón principal Morado Canva */
+.btn-guardar-canva {
+    width: 100%;
+    background-color: #7d2ae8;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-guardar-canva:hover {
+    background-color: #661fc4;
+}
+
+/* Avisos y Alertas */
+.alerta-canva {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.alerta-canva.exito {
+    background-color: #e8f5e9;
+    color: #1e4629;
+    border: 1px solid #c8e6c9;
+}
+
+.alerta-canva.error {
+    background-color: #fdf2f2;
+    color: #c0392b;
+    border: 1px solid #fde8e8;
+}
+.exito-icono-contenedor {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.exito-icono {
+    font-size: 3rem;
+}
+
+.exito-titulo {
+    text-align: center;
+    color: #2ecc71;
+}
+
+.exito-subtitulo {
+    text-align: center;
+}
+
+.recibo-container {
+    background-color: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 20px;
+}
+
+.recibo-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cbd5e1;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.recibo-titulo-seccion {
+    margin: 0;
+    color: #0e1217;
+}
+
+.recibo-badge-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.recibo-id-texto {
+    font-size: 0.85rem;
+    color: #718096;
+    font-weight: bold;
+}
+
+.badge-id {
+    background-color: #2ecc71;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+.tabla-resumen {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabla-resumen td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+}
+
+.tabla-resumen td:first-child {
+    font-weight: 600;
+    color: #4a5568;
+    width: 35%;
+}
+
+.tabla-resumen td:last-child {
+    color: #1a202c;
+}
+
+.recibo-botonera {
+    text-align: center;
+}
+
+.btn-accion-recibo {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #00c4cc;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 25px;
+    transition: background 0.2s ease;
+}
+
+.btn-accion-recibo:hover {
+    background-color: #00a9b0;
+}
