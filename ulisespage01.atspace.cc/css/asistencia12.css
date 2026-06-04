@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-color: white;
+}
+#contenedor{
+	width: 960px;
+	height: auto;
+	margin: 10px auto;
+	background-color: aqua;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-areas: 
+		"log log log log"
+		"head head head head"
+		"nav1 nav2 nav3 nav4"
+		"abot abot lik1 lik1"
+		"abot abot link2 link2"
+		"foot foot foot foot";
+	box-shadow: 4px 4px gray;
+}
+#logo{
+	grid-area: log;
+	background-color: gray;
+	height: 60px;
+	width: 900px;
+	border-color: red;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius:10px; 
+	box-shadow: 4px 4px gray;
+	background-image: url("../imagenes/mario_kart_world.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 900px 100px;
+	
+}
+#header{
+	grid-area: head;
+	background-color: aqua;
+	width: 900px;
+	height: 200px;
+	margin: 10px;
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius:10px; 
+	box-shadow: 4px 4px gray;
+	background-image: linear-gradient( red,orange,yellow, green,blue,purple);
+	
+}
+#nav1{
+	grid-area: nav1;
+	background-color: rebeccapurple;
+	width: 200px;
+	height: 30px;
+	margin: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius:10px; 
+	box-shadow: 4px 4px gray;
+	background-image: linear-gradient(red, white);
+	
+}
+#nav2{
+	grid-area: nav2;
+	background-color: rebeccapurple;
+	width: 200px;
+	height: 30px;
+	margin: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius:10px; 
+	box-shadow: 4px 4px gray;
+	background-image: linear-gradient(orange, white);
+	
+}
+#nav3{
+	grid-area: nav3;
+	background-color: rebeccapurple;
+	width: 200px;
+	height: 30px;
+	margin: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius:10px; 
+	box-shadow: 4px 4px gray;
+	background-image: linear-gradient(yellow, white);
+	
+}
+#nav4{
+	grid-area: nav4;
+	background-color: rebeccapurple;
+	width: 200px;
+	height: 30px;
+	margin: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius:10px; 
+	box-shadow: 4px 4px gray;
+	background-image: linear-gradient(green, white);
+	
+}
+#about{
+	grid-area: abot;
+	background-color: gray;
+	width: 460px;
+	height: 360px;
+	margin: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius:10px; 
+	box-shadow: 4px 4px gray;
+	background-image: linear-gradient(green, blue, red);
+	
+}
+#links1{
+	grid-area: lik1;
+	background-color: gray;
+	width: 420px;
+	height: 180px;
+	margin: 10px;
+	margin-bottom: 15px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius:10px; 
+	box-shadow: 4px 4px gray;
+	background-image: linear-gradient(red, white);
+	
+}
+#links2{
+	grid-area: link2;
+	background-color: gray;
+	width: 420px;
+	height: 160px;
+	margin: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius:10px; 
+	box-shadow: 4px 4px gray;
+	background-image: linear-gradient(red, green, white);
+	
+}
+#footer{
+	grid-area: foot;
+	background-color: gray;
+	width: 900px;
+	height: 200px;
+	margin: 10px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius:10px; 
+	box-shadow: 4px 4px gray;
+	background-image: linear-gradient( red,orange,yellow, green,blue,purple);
+	
+}
+

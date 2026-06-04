@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* === ENCABEZADOS === */
+h2 {
+    background: #e8e88c;
+    text-align: right;
+    padding: 5px;
+}
+
+/* === LINKS === */
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: purple;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* === LISTA CON ICONOS WHATSAPP === */
+.division_listado {
+    background-color: #33acff;
+    list-style: none;
+    padding: 10px;
+}
+
+.division_listado ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.division_listado li {
+    background: url("../imagenes/WHATSAPP_ICON.gif") no-repeat left center;
+    background-size: 10px 10px; /* tamaño del ícono */
+    padding-left: 20px;
+    margin: 5px 0;
+}
+
+/* === TABLA DE DATOS === */
+#titulo_tabla_datos {
+    background: #e8e88c;
+    text-align: right;
+    padding: 5px;
+}
+
+.tabla_datos {
+    border: 3px solid blue;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.division_tabla {
+    background-color: #CCCCCC;
+    color: #000000;
+    clear: both;
+    padding: 10px;
+}
+
+th {
+    background: #666666;
+    text-align: center;
+    border: 1px solid black;
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+td {
+    border: 1px solid #000000;
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #ACE4F7; /* filas pares */
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF; /* filas impares */
+}
+
+/* === AUTOR === */
+h2:last-of-type {
+    background-color: #5e95ba;
+    color: #000000;
+    text-align: center;
+    text-shadow: 2px 2px #CCCCCC;
+    padding: 5px;
+}

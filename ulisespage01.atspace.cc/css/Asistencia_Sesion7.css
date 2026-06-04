@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+    color: blue;
+}
+
+p {
+    color: #333333;
+    text-align: justify;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    width: 50%;
+    border: 2px solid red;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    text-align: center;
+    border: 1px solid black;
+}
+
+table tr:first-child {
+    background-color: #333333;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:not(:first-child) {
+    background-color: #ffffcc;
+    color: blue;
+}
+
+table td, table th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+input[type="text"] {
+    color: red;
+}
+
+select {
+    color: blue;
+}
+
+input[type="submit"],
+button {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}

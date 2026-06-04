@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+  background-color: antiquewhite;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;  
+}
+
+
+#contenedor {
+  width: 960px;
+  background-color: #001a57; 
+  border-radius: 8px;
+  padding: 10px 0 ;
+}
+
+
+#banner {
+  width: 880px;
+  height: 200px;
+  background-color: gray;
+  margin: auto;
+  margin-bottom: 10px;
+  background-image: url("../imagenes/logoLeones.png");
+  background-position: left top;
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  box-shadow: 4px 4px  red;
+}
+
+#navegacion {
+  width: 880px;
+  height: 50px;
+  background-color: darkkhaki;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+#bienvenida {
+  width: 880px;
+  height: 320px;
+  background-color: cornflowerblue;
+  margin: auto;
+  margin-bottom: 10px;
+	background-image: url("../imagenes/Aston_Martin.jpeg"), 
+						   url("../imagenes/Mustang.jpeg");
+	background-repeat: no-repeat, no-repeat;
+	 background-position: right top, left top;
+	background-size: 320px 320px, 320px 320px;
+}
+
+
+#bloques {
+  width: 880px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+#bloque1 {
+  width: 286px;
+  height: 400px;
+  background-color: gray;
+  	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+  background-image: linear-gradient(white, orange);
+}
+
+#bloque2{
+	 width: 286px;
+  height: 400px;
+  background-color: gray;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	background-image: linear-gradient(white, yellow); 
+}
+
+#bloque3 {
+  width: 286px;
+  height: 400px;
+  background-color: gray;
+  	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+  background-image: linear-gradient(white, lightblue);
+}
+
+
+#pie {
+  width: 880px;
+  height: 100px;
+  background-color: purple;
+  margin: auto;
+	box-shadow: 4px 4px #D3D3D3;
+}

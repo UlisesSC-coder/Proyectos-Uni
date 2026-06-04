@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+	background-color: yellowgreen
+}
+
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+#Nombre_Inicio {
+	width: 100%;
+	height: 100px;
+	background-color: aqua;
+	margin: 0 auto 10px auto;
+	text-align: center;
+	line-height: 100px;
+}
+
+#Contenedor {
+	max-width: 1200px; /* <-- limita el ancho total */
+	width: 95%; /* <-- ocupa casi toda la pantalla, pero deja margen */
+	background-color: gray;
+	margin: auto;
+	overflow: hidden; /* <-- evita que algo se salga */
+	border-radius: 10px; /* opcional: bordes suaves */
+}
+
+#Nombre_Final {
+	width: 100%;
+	height: 100px;
+	background-color: aqua;
+	margin: 10px auto;
+	text-align: center;
+	line-height: 100px;
+}
+
+
+#sidebar {
+	width: 30%;
+	background-color: #2F39E8;
+	float: left;
+	margin: 10px;
+	color: white;
+	text-align: center;
+	border-radius: 8px;
+}
+
+
+#Main {
+	width: 65%;
+	background-color: antiquewhite;
+	float: right;
+	margin: 10px;
+	border-radius: 8px;
+}
+
+
+#extra_conitainer {
+	width: 65%;
+	background-color: aquamarine;
+	float: right;
+	margin: 10px;
+	clear: right;
+	border-radius: 8px;
+}
+
+
+@media (max-width: 800px) {
+	#sidebar, #Main, #extra_conitainer {
+		width: 100%;
+		float: none;
+		margin: 10px 0;
+	}
+}
+
+
+
+
+
+
+
+

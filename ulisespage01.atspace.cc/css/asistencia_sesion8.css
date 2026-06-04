@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+/* Fondo general */
+body {
+  background-color: black;
+}
+
+/* Contenedor */
+div[style*="width:60%"] {
+  width: 60%;
+  margin: auto;
+  background-color: darkgray;
+  border: 1px solid #000;
+}
+
+/* Título principal */
+#titulo {
+  background: linear-gradient(#e8e88c 60%, #33acff);
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Imagen Leones 1 */
+#Imagen_leones {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  float: left;
+  width: 250px;
+  height: 250px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* Video MP4 */
+#videomp4 {
+  float: left;
+  width: 60%;
+  height: auto;
+ 
+  border-radius: 4px;
+}
+
+/* Imagen Leones 2 */
+#imagenen_leones2 {
+  float: right;
+  width: 250px;
+  height: 250px;
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#contenedor-video-y-texto {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.youtube-video {
+  flex: 1;
+}
+
+.division_texto_derecha {
+  flex: 1;
+  background-color: #e4e4e4;
+  padding: 15px;
+  font-family: 'Courier New', cursive;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  line-height: 1.6;
+font-family: Tipografia1;
+}
+
+
+/* Párrafos */
+#parrafo, #parrafo2 {
+  text-align: justify;
+}
+
+#link {
+  text-align: justify;
+}
+
+/* Subtítulos */
+h2, h3 {
+  color: black;
+}
+
+/* Enlaces */
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: purple;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Sección listado */
+.division_listado {
+  background-color: #33acff;
+  height: 150px;
+  padding: 10px;
+}
+
+.division_listado ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.division_listado li {
+  display: inline-block;
+  margin: 1px 1px;
+  padding: 1px 1px;
+  background-color: #FEC3CA;
+  border: 2px solid #DCB86B;
+  border-radius: 6px;
+}
+
+/* Tabla */
+#titulo_tabla_datos {
+  clear: both;
+  background: #e8e88c;
+  text-align: right;
+  color: black;
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.division_tabla {
+  background-color: #CCCCCC;
+  width: 640px;
+  margin: 20px auto;
+  border: 3px dashed red;
+  text-align: center;
+  padding: 10px 0 20px 0;
+}
+
+.tabla_datos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #666666;
+  color: white;
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Colores alternos en filas */
+tbody tr:nth-child(even) {
+  background-color: #ACE4F7; /* azul claro */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #FFFFFF; /* blanco */
+}
+
+.autor {
+  background: linear-gradient(to bottom, black, #ccc); /* Degradado negro a gris */
+  color: white; /* Texto blanco */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 20px; /* Tamaño de letra */
+  text-align: center; /* Centrar texto */
+  padding: 10px 0; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  text-shadow: 2px 2px 4px black; /* Sombra en el texto */
+  width: 90%; /* Ajusta el ancho si lo deseas */
+  margin: 20px auto; /* Centra horizontalmente */
+  box-shadow: inset 0 0 10px #00000055; /* Efecto sutil de profundidad */
+}
+
+@font-face{
+	font-family: Tipografia1;
+	src:url("../fuentes/Tipografia1.ttf")
+}

@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@font-face {
+    font-family: 'Tipografia1';
+	src: url("../fuentes/Tipografia1.ttf")
+}
+
+@font-face {
+    font-family: 'Tipografia2';
+	src: url("../fuentes/Tipografia2.ttf")
+}
+
+@font-face {
+    font-family: 'Tipografia3';
+	src: url("../fuentes/Tipografia3.ttf")
+}
+
+
+
+
+body{
+	background-color: bisque;
+}
+
+#layout{
+	width: 960px;
+	background-color: cadetblue;
+	border-radius: 8px;
+    padding: 1px 0;
+	margin: auto;
+}
+
+#nombre_header{
+	display: flex;
+  align-items: center;    
+  justify-content: center;
+  height: 100px;  
+	 font-family: 'Tipografia1';
+}
+
+#header{
+	width: 940px;
+	height: 100px;
+	background-color: aquamarine;
+	margin: auto;
+	margin-bottom: 10px;
+	background-image: url("../imagenes/mario_kart_world.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	box-shadow: 0 9px 8px rgba(0, 0, 0, 0.3); 
+}
+
+#aside_article{
+	width: 940px;
+	height: 400px;
+	margin: auto;
+	justify-content: space-between;
+}
+
+#aside{
+	width: 210px;
+	height: 400px;
+	background-color: green;
+	float: left;
+	text-align: left;
+	 padding: 20px;
+  box-sizing: border-box;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	background-image: linear-gradient(yellow, red);
+	box-shadow: 0 9px 8px rgba(0, 0, 0, 0.3); 
+	font-family: 'Tipografia2';
+}
+
+#article {
+  width: 700px;
+  height: 400px;
+  background-color: orangered;
+  float: right;
+
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+	background-image: linear-gradient(yellow, red);
+	box-shadow: 0 9px 8px rgba(0, 0, 0, 0.3); 
+	font-family: 'Tipografia2';
+}
+
+#p_aside{
+	text-align: justify;
+}
+
+#texto_article {
+  width: 660px;
+  height: 170px;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+#p_article{
+	text-align: justify;
+}
+
+
+#article_imagenes {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; 
+  padding: 0 20px 10px 20px; 
+  box-sizing: border-box;
+	
+}
+
+
+#imagen1, #imagen2, #imagen3 {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
+	text-align: center;
+	align-items: center;
+	background-image: linear-gradient(yellow, green);
+	box-shadow: 0 9px 8px rgba(0, 0, 0, 0.3); 
+	font-family: 'Tipografia3';
+}
+
+
+#footer{
+		width: 940px;
+	height: 100px;
+	background-color: aquamarine;
+	margin: auto;
+	margin-bottom: 10px;
+	background-image: url("../imagenes/mario_kart_world.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+		border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	box-shadow: 0 9px 8px rgba(0, 0, 0, 0.3); 
+}
+
+#nombre_footer{
+	display: flex;
+  align-items: center;    
+  justify-content: center;
+  height: 100px;
+	 font-family: 'Tipografia1';
+}

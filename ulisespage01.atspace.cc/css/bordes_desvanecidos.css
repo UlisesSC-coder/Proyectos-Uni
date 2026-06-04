@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* Estilos para práctica de */
+/* NOVEDADES EN CSS 3 - BORDES - DESVANECIDOS - SOMBRAS - ESQUINAS REDONDAS */
+* { margin: 0; padding: 0; }
+
+body {
+    background-color: #000000;
+}
+
+@font-face {
+    font-family: Tipografia2;
+    src: url("../fuentes/Tipografia2.ttf");
+}
+
+@font-face {
+    font-family: Tipografia1;
+    src: url("../fuentes/Tipografia1.ttf");
+}
+
+/* Estilos por ID para contenedor */
+#contenedor {
+    width: 960px;               /* width es para definir ANCHURA */
+    height: 500px;              /* height es para definir ALTURA */
+    background-color: lightgray;
+    margin: auto;               /* margin en auto es para CENTRAR */
+}
+
+/* Estilos por ID para div1 */
+#div1 {
+    width: 300px;
+    height: 180px;
+    background-color: #2F39E8;
+    float: left;                /* Se ubica en relación al Objeto contenedor */
+    top: 20px;                  /* top es para colocar partiendo del lado de ARRIBA */
+    left: 20px;                 /* left es para colocar partiendo del lado izquierdo */
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+
+    /* Para los BORDES */
+    border-style: solid;
+    border-width: 3px;
+    border-color: red;
+
+    /* Para las ESQUINAS REDONDEADAS */
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 20px;
+
+    /* Para el color de fondo DESVANECIDO */
+    background-image: linear-gradient(yellow, green);
+
+    /* Para la SOMBRA */
+    box-shadow: 10px 10px #646464;
+
+    font-family: Tipografia2;
+    font-size: 30px;
+}
+
+/* Estilos por ID para div2 */
+#div2 {
+    width: 700px;
+    height: 200px;
+    background-color: #2F39E8;
+    float: right;               /* Se ubica en relación al Objeto contenedor */
+    top: 20px;                  /* top es para colocar partiendo del lado de ARRIBA */
+    left: 40px;                 /* left es para colocar partiendo del lado izquierdo */
+    color: white;
+    margin-top: 20px;
+    margin-right: 20px;
+
+    /* Para los BORDES */
+    border-style: solid;
+    border-width: 3px;
+    border-color: red;
+
+    /* Para las ESQUINAS REDONDEADAS */
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 20px;
+
+    /* Para la SOMBRA */
+    box-shadow: 10px 10px #646464;
+
+    /* Para las imágenes de fondo */
+    background-image: url("../imagenes/fondo1.jpg"),
+                      url("../imagenes/fondo3.jpg");
+    background-position: right top, left top;
+    background-size: 600px 300px, 200px 200px;
+    background-repeat: no-repeat, no-repeat;
+}
+
+
+
+#div3 {
+    width: 300px;
+    height: 180px;
+    background-color: #2F39E8;
+    float: right;                /* Se ubica en relación al Objeto contenedor */
+    top: 20px;                  /* top es para colocar partiendo del lado de ARRIBA */
+    left: 20px;                 /* left es para colocar partiendo del lado izquierdo */
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+
+    /* Para los BORDES */
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+
+    /* Para las ESQUINAS REDONDEADAS */
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 20px;
+
+    /* Para el color de fondo DESVANECIDO */
+    background-image: radial-gradient(white, green);
+
+    /* Para la SOMBRA */
+    box-shadow: -10px -10px 0px red;
+;
+
+    font-family: Tipografia2;
+    font-size: 30px;
+}
+

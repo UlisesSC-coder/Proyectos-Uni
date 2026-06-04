@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+body {
+	background-color: gray;
+	padding: 20px;
+	font-family: Arial, sans-serif;
+	color: white;
+	text-align: center;
+}
+
+
+#contenedor {
+	background-color: #383b4a;
+	width: 960px;
+	margin: auto;
+	padding: 10px;
+	box-sizing: border-box;
+
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 120px 250px 250px 120px;
+	grid-template-areas:
+		"header header header"
+		"sidebar content1 content1"
+		"sidebar content2 content3"
+		"footer footer footer";
+}
+
+#header, #footer {
+	background: linear-gradient(135deg, #7f5af0, #5a3ee0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+}
+
+#footer {
+	grid-area: footer;
+}
+
+#header {
+	grid-area: header;
+}
+
+#header h1, #footer h1 {
+	color: white;
+	font-size: 22px;
+	margin: 0;
+}
+
+
+#sidebar {
+	grid-area: sidebar;
+	background: linear-gradient(135deg, #2ec4b6, #1cb5e0);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+}
+
+#sidebar a {
+	color: darkblue;
+	text-decoration: none;
+	margin: 10px 0;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+#sidebar a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+
+#content1, #content2, #content3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+}
+
+#content1 { grid-area: content1; background: linear-gradient(135deg, #3a7bd5, #00d2ff); }
+#content2 { grid-area: content2; background: linear-gradient(135deg, #3a7bd5, #00d2ff); }
+#content3 { grid-area: content3; background: linear-gradient(135deg, #3a7bd5, #00d2ff); }
+
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* 🔹 Hace que la imagen llene el contenedor sin deformarse */
+	border-radius: 10px;
+	box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+	display: none; /* Ocultas por defecto */
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+img.mostrar {
+	display: block;
+	opacity: 1;
+}
+

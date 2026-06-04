@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#contenedor {
+  width: 960px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+header {
+  background: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px 15px 0 0;
+}
+
+#logo {
+  width: 180px;
+  height: 60px;
+  background: linear-gradient(to bottom, red, orange);
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  line-height: 60px;
+}
+
+#titulo {
+  flex: 1;
+  height: 100px;
+  background: linear-gradient(to right, #008080, #20b2aa);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+nav {
+  background: linear-gradient(to bottom, yellow, gold);
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+#secciones {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 10px;
+}
+
+#secciones div {
+  flex: 1;
+  margin: 5px;
+  height: 100px;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#seccion1 {
+  background: linear-gradient(to bottom, blue, navy);
+}
+
+#seccion2 {
+  background: linear-gradient(to bottom, gray, dimgray);
+}
+
+#seccion3 {
+  background: linear-gradient(to bottom, violet, purple);
+}
+
+#contenido {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+#principal {
+  width: 70%;
+  height: 150px;
+  background: linear-gradient(to bottom, cyan, turquoise);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+#sidebar {
+  width: 27%;
+  height: 150px;
+  background: linear-gradient(to bottom, olive, darkolivegreen);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  background: linear-gradient(to right, skyblue, steelblue);
+  border-radius: 0 0 15px 15px;
+  padding: 25px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
