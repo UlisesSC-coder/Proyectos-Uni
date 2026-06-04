@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Formulario Venta de Motocicletas</title>
+</head>
+
+<body>
+	<h2>Programacion Web</h2>
+		
+	<form method="post" action="grabar_motos.php" id="form1_vendiendo_motos">
+	<fieldset>
+		<legend>FORMULARIO de Venta de Motocicletas:</legend>
+		
+		<br>
+		
+		<!-- CAJAS DE TEXTO -->
+		<label for="txt_propietario">Nombre completo del Propetario:</label><br>
+		<input type="text" id="txt_propietario" name="txt_propietario" value="">
+		<br><br>
+		
+		<!-- CAJAS DE SELECCIÓN o "ComboBox" -->
+		Motocicleta:<br>
+		<select id="cb_motocicletas" name="cb_motocicletas">
+			<option value="0">Selecciona un tipo...</option>
+			<option value="Pro">Profesional</option>
+			<option value="Car">Carreras</option>
+			<option value="Pis">Pista</option>
+		</select>
+		<br><br>
+		
+		<!-- CAJAS DE SELECCIÓN o "ComboBox" -->
+		Modelo:<br>
+		<select id="cb_modelo" name="cb_modelo">
+			<option value="0"> -- Selecciona el Modelo -- </option>
+			<option value="2022"> 2022 </option>
+			<option value="2023"> 2023 </option>
+			<option value="2024"> 2024 </option>
+                        <option value="2025"> 2025 </option>
+                        <option value="2026"> 2026 </option>
+		</select>
+		<br><br>
+
+		<input type="hidden" id="programador" name="programador" value="Abraham Vega Tapia">
+
+		<br>
+		
+		<!-- Boton de Comando de Submit  -->
+		<input type="submit" value="..::  Grabar Datos  ::..">
+
+	</fieldset>
+</form>
+
+</body>
+</html>
